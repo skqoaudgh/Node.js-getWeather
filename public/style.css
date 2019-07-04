@@ -1,0 +1,39 @@
+.container {
+    margin: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type=text] {
+    font-size: 24px;
+    width: 500px;
+    margin-bottom: 50px;
+    padding: 20px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #a3a3a3;
+    color: #a3a3a3;
+}
+
+input[type=text]::placeholder {
+    color: #a3a3a3;
+}
+
+button[type=submit] {
+    all: unset;
+    font-size: 20px;
+    width: 520px;
+    height: 30px;
+    text-align: center;
+    border: 2px solid #a3a3a3;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#weather {
+    margin: 50px;
+    width: 545px;
+    color: #3dad2e;
+    font-size: 20px;
+}
