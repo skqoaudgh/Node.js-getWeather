@@ -13,7 +13,7 @@ app.get('/', (req, res, next) => {
 });
 
 app.post('/', (req, res, next) => {
-    let url = `http://api.openweathermap.org/data/2.5/weather?q=${req.body.city}&units=imperial&appid=f39783cc83854e91534ae28ca26e6524`;
+    let url = `http://api.openweathermap.org/data/2.5/weather?q=${req.body.city}&units=metric&appid=f39783cc83854e91534ae28ca26e6524`;
     let text = '';
     let error;
     request(url, function(err, result, body) {
@@ -28,8 +28,7 @@ app.post('/', (req, res, next) => {
                 error = true;
             }
             else {
-                const temp = ((weather.main.temp - 32) * 5/9).toFixed(0);
-                text = `${req.body.city}'s Current Temperature is ${temp}˚C`;
+                text = `${req.body.city}'s Current Temperature is ${weather.main.temp.toFixed(0)}˚C`;
                 error = false;
             }
         }
