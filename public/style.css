@@ -37,3 +37,10 @@ button[type=submit] {
     color: #3dad2e;
     font-size: 20px;
 }
+
+#error {
+    margin: 50px;
+    width: 545px;
+    color: #ff4848;
+    font-size: 20px;
+}
