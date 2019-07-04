@@ -9,7 +9,7 @@ app.use(express.json())
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res, next) => {
-    res.render('index');
+    res.render('index', {error: false, text: ''});
 });
 
 app.post('/', (req, res, next) => {
