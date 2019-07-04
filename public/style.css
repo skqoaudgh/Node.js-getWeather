@@ -12,12 +12,16 @@ input[type=text] {
     padding: 20px;
     outline: none;
     border: none;
-    border-bottom: 2px solid #a3a3a3;
+    border: none;
     color: #a3a3a3;
 }
 
 input[type=text]::placeholder {
     color: #a3a3a3;
+}
+
+input[type=text]:focus {
+    border-bottom: 2px solid #a3a3a3;
 }
 
 button[type=submit] {
@@ -29,6 +33,12 @@ button[type=submit] {
     border: 2px solid #a3a3a3;
     padding: 10px;
     cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+button[type=submit]:hover {
+    background: #416cbd;
+    color: white;
 }
 
 #weather {
